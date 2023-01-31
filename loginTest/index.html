@@ -1,0 +1,57 @@
+<!--
+ * @Author: haochen 549132168@qq.com
+ * @Date: 2022-12-16 14:18:01
+ * @LastEditors: haochen 549132168@qq.com
+ * @LastEditTime: 2022-12-20 15:02:22
+ * @FilePath: \test\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ----tste
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/cas-ext.js"></script>
+<script type="text/javascript" src="js/RSA.js"></script>
+<script type="text/javascript" src="js/BigInt.js"></script>
+<script type="text/javascript" src="js/Barrett.js"></script>
+<script type="text/javascript" src="js/styleConfig.js"></script>
+<script type="text/javascript">
+
+    var key = null;
+    var countdown = 90;
+    var bool = true;
+    // 公钥指数
+    var empoent = "10001";
+    // 公钥模数
+    var module = "90e3486cbcb4858df6837d42a89564fa75f6186c7fde7e9ffc12ec7e53a02c2a98a4890dacc49621fd94b658913c3282233372746b26f346595e489f0855f7b3bfabd26828ea3a119827a85fca321b50c33a93c6864da106c7ee75f7c40cf3582e82405105745b74b9151d1eabe0db756999d198571a087cb9cb18f7a3ea2809";
+
+    // 初始化key
+    function initKey() {
+	    setMaxDigits(130);
+        key = new RSAKeyPair(empoent, "", module);
+        
+        console.log("key",key)
+    }
+    this.initKey()
+
+    console.log(username, encryptedString(key, encodeURIComponent('xxx')))
+    console.log(password, encryptedString(key, encodeURIComponent('xxx')))
+
+</script>
+
+</html>
+
+
+
+
+
